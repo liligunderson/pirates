@@ -141,26 +141,6 @@ class Player (Context):
 
 
 
-        
-
-        
-#code I added
-    def play_game(self):
-        # Example code handling player actions
-        while True:
-            player_input = input("What is your command: ")
-            verb, *rest = player_input.lower().split()
-            next_location = self.location.process_verb(verb, rest, None)
-
-            if next_location:
-                self.next_loc = next_location
-                self.visiting = False
-                print(f"DEBUG: Next location set to {self.next_loc}")
-
-
-
-
-
 
 
 
