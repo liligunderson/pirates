@@ -103,3 +103,7 @@ class Ship (Context):
 
         for crew in config.the_player.get_pirates():
             crew.end_day ()
+
+    def start_turn(self):
+        # Add any necessary logic for starting a turn for the ship
+        pass

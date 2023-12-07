@@ -139,6 +139,35 @@ class Player (Context):
             announce ("Error: Player object does not understand verb " + verb)
             pass
 
+
+
+        
+
+        
+#code I added
+    def play_game(self):
+        # Example code handling player actions
+        while True:
+            player_input = input("What is your command: ")
+            verb, *rest = player_input.lower().split()
+            next_location = self.location.process_verb(verb, rest, None)
+
+            if next_location:
+                self.next_loc = next_location
+                self.visiting = False
+                print(f"DEBUG: Next location set to {self.next_loc}")
+
+
+
+
+
+
+
+
+
+
+
+
     @staticmethod
     def get_interaction (contexts):
         # look at all of the the contexts and find the verbs and nouns
